@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block body %}
+    
+<h1>\Update your blogs</h1>
+   
+<form action="/update/{{blog.sno}}", method="POST">
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" class="form-control" name="title" id="title" value="{{blog.title}}" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="content" class="form-label">Content</label>
+      <input type="text" class="form-control" name="content" value="{{blog.content}}" id="content">
+    </div>
+    <div class="mb-3">
+      <label for="author" class="form-label">Author</label>
+      <input type="text" class="form-control" name="author" value="{{blog.author}}" id="author">
+    </div>
+    
+    
+    <button type="submit" class="btn btn-primary mb-3">Update</button>
+  </form>
+{% endblock %}
